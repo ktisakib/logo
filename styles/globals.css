@@ -14,3 +14,61 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.logo {
+  overflow: hidden;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 200;
+  padding: 10rem; 
+}
+.logo::before {
+  content: "";
+  top: -130VH;
+  z-index: -1;
+  width: 350%;
+  height: 350%;
+  position: absolute;
+  transform: scale(2);
+  -webkit-animation-name: example;
+  animation-name: example;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  background: radial-gradient(rgba(25, 25, 28, 0) 50%, #19191c 80%),
+    conic-gradient(
+      #9c3cf7 0,
+      #14277a 15.2%,
+      #19191c 18.2%,
+      #03788d 20.5%,
+      #1f1f44 30.2%,
+      #4d0662 50%,
+      #0e0ab4 56.5%,
+      #3e146e 59.4%,
+      #060551 66.2%,
+      #101057 72.9%,
+      #242473 85.1%,
+      #1e1ae8 89.1%,
+      #0a06b7 90.6%,
+      #19191c 93.7%,
+      #9c3cf7 100%
+      
+    );
+}
+@keyframes example {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(60deg);
+  }
+}
